@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,40 +7,126 @@
     android:background="@drawable/blue_grid_background"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
+    android:padding="2dp"
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/logo_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:background="@drawable/shape_oval"
         android:gravity="center"
-        >
+        android:layout_marginBottom="30dp">
 
         <TextView
+            android:id="@+id/logo_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:fontFamily="casual"
             android:text="@string/app_name"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimary"
             android:textSize="40sp" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="30dp"
+        android:paddingRight="100dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/BMI_view"
+        android:gravity="center"
+        android:layout_below="@id/logo_view">
+
+        <TextView
+            android:id="@+id/BMI_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shape_rounded_rectangle"
+            android:fontFamily="casual"
+            android:padding="10sp"
+            android:text="@string/text_BMI"
+            android:textSize="30sp"
+            android:textStyle="italic|bold" />
+    </RelativeLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/input_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_margin="20sp">
+        android:layout_below="@id/BMI_view"
+        android:layout_marginLeft="50dp"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/height_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/height_text"
+                android:text="@string/text_height"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:fontFamily="casual"/>
+
+            <EditText
+                android:id="@+id/input_height_box"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weight_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/weight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_weight"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:fontFamily="casual"/>
+
+            <EditText
+                android:id="@+id/input_weight_box"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:inputType="numberDecimal"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
     </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button_view"
         android:gravity="center">
 
         <Button
@@ -51,17 +136,11 @@
             android:fontFamily="casual"
             android:text="@string/text_calculateButton"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimary"
             android:textSize="22sp"
             android:textStyle="bold"
             android:theme="@style/MyButton" />
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:padding="20sp"
-        android:text="@string/text_BMI"
-        android:textSize="30sp" />
-</LinearLayout>
+
+</RelativeLayout>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
     <string name="text_calculateButton">Calculate</string>
-    <string name="text_BMI">BMI: </string>
+    <string name="text_BMI">BMI : </string>
+    <string name="text_height">Height: </string>
+    <string name="text_weight">Weight: </string>
 </resources>
