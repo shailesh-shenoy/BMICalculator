@@ -3,4 +3,8 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#212121</color>
     <color name="colorAccent">#0277BD</color>
+    <color name="colorObese">#FF0000</color>
+    <color name="colorHealthy">#05FB05</color>
+    <color name="colorUnderweight">#0000FF</color>
+    <color name="colorOverweight">#FFA500</color>
 </resources>
